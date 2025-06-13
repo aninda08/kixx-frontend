@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS_16'  // You must configure this in Jenkins: Manage Jenkins > Global Tool Configuration
+        nodejs 'node'  // You must configure this in Jenkins: Manage Jenkins > Global Tool Configuration
     }
 
     stages {
