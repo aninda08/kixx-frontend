@@ -1,0 +1,17 @@
+.league-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  
+  .form-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+    .dropdown {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+}

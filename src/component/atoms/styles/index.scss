@@ -1,0 +1,18 @@
+// Atoms global styles
+
+// Base styles for atoms
+:root {
+  --atom-spacing: 0.5rem;
+  --atom-border-radius: 4px;
+}
+
+// Mixins for atoms
+@mixin atom-padding {
+  padding: var(--atom-spacing);
+}
+
+// Base styles for all atom components
+.atom-component {
+  @include atom-padding;
+  border-radius: var(--atom-border-radius);
+}

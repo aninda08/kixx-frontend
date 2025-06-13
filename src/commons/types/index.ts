@@ -1,0 +1,1 @@
+export type LeagueTabValue = 'overall' | 'home' | 'away';
