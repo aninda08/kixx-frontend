@@ -30,6 +30,15 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            environment {
+                SONARQUBE_TOKEN = credentials('SONARQUBE_TOKEN')
+            }
+            steps {
+                sh 'npm run sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.token=${SONARQUBE_TOKEN}'
+            }
+        }
+
         stage('Archive Build Artifacts') {
             steps {
                 archiveArtifacts artifacts: "${BUILD_DIR}/**", fingerprint: true

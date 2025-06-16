@@ -9,7 +9,12 @@ interface SelectItemProps {
 
 export const SelectItem: React.FC<SelectItemProps> = ({ id, name, logo }) => {
   return (
-    <Box display="flex" alignItems="center" gap={1}>
+    <Box 
+      display="flex" 
+      alignItems="center" 
+      gap={1}
+      data-testid="select-item-container"
+    >
       <img
         src={logo}
         alt={name}
