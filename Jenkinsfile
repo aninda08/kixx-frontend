@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'npm test -- --watchAll=false'
+                sh 'npm run test:coverage'
             }
         }
 
@@ -39,11 +39,11 @@ pipeline {
             }
         }
 
-        stage('Archive Build Artifacts') {
-            steps {
-                archiveArtifacts artifacts: "${BUILD_DIR}/**", fingerprint: true
-            }
-        }
+        // stage('Archive Build Artifacts') {
+        //     steps {
+        //         archiveArtifacts artifacts: "${BUILD_DIR}/**", fingerprint: true
+        //     }
+        // }
 
         stage('Deploy (Optional)') {
             when {
